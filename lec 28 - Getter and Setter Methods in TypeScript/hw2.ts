@@ -16,6 +16,10 @@ class Temperature{
         const fahrenheit = (this._celsius * (9/5))+32;
         return fahrenheit;
     }
+
+    public set fahrenheit(fahrenheit:number){
+        this._celsius = ((fahrenheit-32)*5)/9;
+    }
 }
 
 const temp = new Temperature();
@@ -31,6 +35,6 @@ console.log("fehrenheit: " , temp.fahrenheit);
 temp.celsius = 13;
 console.log("celsius: " , temp.celsius);
 console.log("fehrenheit: " , temp.fahrenheit);
-temp.celsius = 11;
+temp.fahrenheit = 11;
 console.log("celsius: " , temp.celsius);
 console.log("fehrenheit: " , temp.fahrenheit);
